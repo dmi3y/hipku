@@ -1,0 +1,143 @@
+animalAdjectives:
+  - agile
+  - bashful
+  - clever
+  - clumsy
+  - drowsy
+  - fearful
+  - graceful
+  - hungry
+  - lonely
+  - morose
+  - placid
+  - ruthless
+  - silent
+  - thoughtful
+  - vapid
+  - weary
+
+animalColors:
+  - beige
+  - black
+  - blue
+  - bright
+  - bronze
+  - brown
+  - dark
+  - drab
+  - green
+  - gold
+  - grey
+  - jade
+  - pale
+  - pink
+  - red
+  - white
+  
+animalNouns:
+  - ape
+  - bear
+  - crow
+  - dove
+  - frog
+  - goat
+  - hawk
+  - lamb
+  - mouse
+  - newt
+  - owl
+  - pig
+  - rat
+  - snake
+  - toad
+  - wolf
+
+animalVerbs:
+  - aches
+  - basks
+  - cries
+  - dives
+  - eats
+  - fights
+  - groans
+  - hunts
+  - jumps
+  - lies
+  - prowls
+  - runs
+  - sleeps
+  - thrives
+  - wakes
+  - yawns
+  
+natureAdjectives:
+  - ancient
+  - barren
+  - blazing
+  - crowded
+  - distant
+  - empty
+  - foggy
+  - fragrant
+  - frozen
+  - moonlit
+  - peaceful
+  - quiet
+  - rugged
+  - serene
+  - sunlit
+  - windwept
+  
+natureNouns:
+  - canyon
+  - clearing
+  - desert
+  - foothills
+  - forest
+  - grasslands
+  - jungle
+  - meadow
+  - mountains
+  - prairie
+  - river
+  - rockpool
+  - sandune
+  - tundra
+  - valley
+  - wetlands
+
+plantNouns:
+  - autumnolors
+  - cherrylossoms
+  - chrysanthemums
+  - crabapplelooms
+  - dryalm fronds
+  - fatorse chestnuts
+  - forgete-nots
+  - jasmineetals
+  - lotuslowers
+  - ripelackberries
+  - theaple seeds
+  - theine needles
+  - tigerillies
+  - waterillies
+  - willowranches
+  - yellowwoodeaves
+  
+plantVerbs:
+  - blow
+  - crunch
+  - dance
+  - drift
+  - drop
+  - fall
+  - grow
+  - pile
+  - rest
+  - roll
+  - show
+  - spin
+  - stir
+  - sway
+  - turn
+  - twist

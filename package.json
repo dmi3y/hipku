@@ -21,5 +21,12 @@
   "bugs": {
     "url": "https://github.com/gabemart/hipku/issues"
   },
-  "homepage": "http://gabrielmartin.net/projects/hipku"
+  "homepage": "http://gabrielmartin.net/projects/hipku",
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-concat": "^2.4.2",
+    "gulp-jshint": "^1.9.0",
+    "gulp-nodeunit": "0.0.5",
+    "jshint-stylish": "^1.0.0"
+  }
 }
