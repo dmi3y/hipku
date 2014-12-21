@@ -1,8 +1,9 @@
-var 
+var
     jshint = require('gulp-jshint'),
     gulp   = require('gulp'),
     nodeunit = require('gulp-nodeunit'),
-    concat = require('gulp-concat');
+    concat = require('gulp-concat'),
+    build = require('./tasks/build');
 
 gulp.task('lint', function() {
   return gulp.src(['./src/**/*.js','./test/**/*.js'])
@@ -13,9 +14,13 @@ gulp.task('lint', function() {
 
 gulp.task('src', function() {
   gulp.src([
-        './src/*.js'
+        './src/decoding-helpers.js',
+        './src/ecoding-helpers.js',
+        './src/public-methods.js',
+        './src/rhythm-maker.js'
     ])
-    .pipe(concat('all.js'))
+    .pipe(concat('hipku.js'))
+    .pipe(build('./src/build-*.js'))
     .pipe(gulp.dest('./dist/'));
 });
 

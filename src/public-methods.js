@@ -45,5 +45,3 @@ var decode = function(haiku) {
 */
 publicMethods.encode = encode;
 publicMethods.decode = decode;
-
-module.exports = publicMethods;
