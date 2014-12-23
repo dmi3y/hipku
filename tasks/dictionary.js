@@ -1,11 +1,14 @@
-"use strict";
+'use strict';
+
 var
+    yaml = require('js-yaml'),
+
     through = require('through2'),
     fs = require('fs'),
     glob = require('glob'),
     File = require('vinyl');
 
-function build(adds) {
+function addDictionary(adds) {
 
   var stream = through.obj(function(file, enc, cb) {
   	var
@@ -15,25 +18,19 @@ function build(adds) {
 	glob(adds, function(err, files) {
 	    var
 	        flen,
-	        path,
 	        cbc;
 
 	    function writeStream(path) {
 
 	    	return function (err, add) {
 	    		var
-	    			nfile,
-	    			ncontents;
+	    			json,
+	    			vname = path.split('/').pop().split('.').shift();
 
 	        	if ( !err ) {
-	        		ncontents = Buffer.concat([contents, add]);
-	        		nfile = new File({
-	        			cwd: file.cwd,
-	        			base: file.base,
-	        			path: path,
-	        			contents: ncontents
-	        		});
-		     		stream.push(nfile);
+	        		json = yaml.load(add);
+	        		json = new Buffer('var ' + vname + ' = ' + JSON.stringify(json) + ';\r\n');
+	        		file.contents = Buffer.concat([file.contents, json]);
 		     		cbc();
 	        	}
         	};
@@ -51,6 +48,7 @@ function build(adds) {
 
 	        		i -= 1;
 	        		if ( i === 0 ) {
+			     		stream.push(file);
 	        			cb();
 	        		}
 	        	};
@@ -58,12 +56,7 @@ function build(adds) {
 
 	        for (; flen--;) {
 
-	            path = file.path.split(/\\|\//g);
-	            path = path.slice(0, -2);
-	            path.push(files[flen].replace('build', 'hipku'));
-	            path = path.join('/');
-
-	            fs.readFile(files[flen], writeStream(path));
+	            fs.readFile(files[flen], writeStream(files[flen]));
 	        }
 	    }
 	});
@@ -72,4 +65,7 @@ function build(adds) {
   return stream;
 }
 
-module.exports = build;
+module.exports = addDictionary;
+
+
+

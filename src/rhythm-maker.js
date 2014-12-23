@@ -7,33 +7,33 @@ function getKey(ipv6) {
 
   if (ipv6) {
     key = [
-      adjectives,
-      nouns,
-      adjectives,
-      nouns,
-      verbs,
-      adjectives,
-      adjectives,
-      adjectives,
-      adjectives,
-      adjectives,
-      nouns,
-      adjectives,
-      nouns,
-      verbs,
-      adjectives,
-      nouns
+      ip6.adjectives,
+      ip6.nouns,
+      ip6.adjectives,
+      ip6.nouns,
+      ip6.verbs,
+      ip6.adjectives,
+      ip6.adjectives,
+      ip6.adjectives,
+      ip6.adjectives,
+      ip6.adjectives,
+      ip6.nouns,
+      ip6.adjectives,
+      ip6.nouns,
+      ip6.verbs,
+      ip6.adjectives,
+      ip6.nouns
     ];
   } else {
     key = [
-      animalAdjectives,
-      animalColors,
-      animalNouns,
-      animalVerbs,
-      natureAdjectives,
-      natureNouns,
-      plantNouns,
-      plantVerbs
+      ip4.animalAdjectives,
+      ip4.animalColors,
+      ip4.animalNouns,
+      ip4.animalVerbs,
+      ip4.natureAdjectives,
+      ip4.natureNouns,
+      ip4.plantNouns,
+      ip4.plantVerbs
     ];
   }
 
